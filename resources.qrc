@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="background.jpg">resources/log_in_background.jpg</file>
+        <file>resources/icon_account_settings.png</file>
+        <file alias="windowicon.png">resources/icon_company.png</file>
+        <file>resources/icon_daily_note.png</file>
+        <file>resources/icon_daily_records.png</file>
+        <file>resources/icon_guest.png</file>
+        <file>resources/icon_manager.png</file>
+        <file>resources/icon_room.png</file>
+        <file>resources/icon_user.png</file>
+        <file>resources/log_in_icon_account.png</file>
+        <file>resources/log_in_icon_hotel.png</file>
+        <file>resources/log_in_icon_password.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file alias="style.qss">style.qss</file>
+    </qresource>
+</RCC>

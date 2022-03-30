@@ -1,0 +1,3 @@
+LogInWindow {
+	border-image: url(:/images/background.jpg);
+}
