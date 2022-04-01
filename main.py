@@ -1,13 +1,10 @@
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import (QApplication, QMainWindow)
-from PyQt5.QtGui import (QIcon, QPalette)
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QAction, QLineEdit)
+from PyQt5.QtGui import (QIcon, QPalette, QPixmap)
 from PyQt5.QtCore import (QFile, QTextStream)
 from Ui_mainwindow import Ui_MainWindow
 import resources_rc
 import sys
-
-WINDOW_WIDTH = 1440
-WINDOW_HEIGHT = 810
 
 
 def setQSS(widget, style):
@@ -24,10 +21,19 @@ class LogInWindow(Ui_MainWindow, QMainWindow):
         self.resetupUi()
 
     def resetupUi(self):
-        width, height = WINDOW_WIDTH, WINDOW_HEIGHT
-        self.resize(width, height)
         self.setWindowTitle('OnePlus Hotel')
         self.setWindowIcon(QIcon(':/images/windowicon.png'))
+        self.icon_login_title.setPixmap(QPixmap(':/images/windowicon.png'))
+        self.icon_inputboard.setPixmap(QPixmap(':/images/hotel.png'))
+        a1 = QAction(self.input_account)
+        a1.setIcon(QIcon(':/images/account.png'))
+        self.input_account.addAction(a1, QLineEdit.LeadingPosition)
+        self.input_account.setPlaceholderText("请输入用户名")
+        a1 = QAction(self.input_account)
+        a1.setIcon(QIcon(':/images/password.png'))
+        self.input_password.addAction(a1, QLineEdit.LeadingPosition)
+        self.input_password.setPlaceholderText("请输入密码")
+        self.text_tips.setReadOnly(True)
         setQSS(self, ':/style.qss')
 
 

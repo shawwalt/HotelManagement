@@ -9,9 +9,9 @@
         <file>resources/icon_manager.png</file>
         <file>resources/icon_room.png</file>
         <file>resources/icon_user.png</file>
-        <file>resources/log_in_icon_account.png</file>
-        <file>resources/log_in_icon_hotel.png</file>
-        <file>resources/log_in_icon_password.png</file>
+        <file alias="account.png">resources/log_in_icon_account.png</file>
+        <file alias="hotel.png">resources/log_in_icon_hotel.png</file>
+        <file alias="password.png">resources/log_in_icon_password.png</file>
     </qresource>
     <qresource prefix="/">
         <file alias="style.qss">style.qss</file>
