@@ -6,10 +6,8 @@ from Ui_mainwindow import Ui_MainWindow
 import resources_rc
 import sys
 
-WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1080
-WINDOW_MUL = 6
-WINDOW_DIV = 8
+WINDOW_WIDTH = 1440
+WINDOW_HEIGHT = 810
 
 
 def setQSS(widget, style):
@@ -26,8 +24,7 @@ class LogInWindow(Ui_MainWindow, QMainWindow):
         self.resetupUi()
 
     def resetupUi(self):
-        a = WINDOW_MUL / WINDOW_DIV
-        width, height = int(WINDOW_WIDTH * a), int(WINDOW_HEIGHT * a)
+        width, height = WINDOW_WIDTH, WINDOW_HEIGHT
         self.resize(width, height)
         self.setWindowTitle('OnePlus Hotel')
         self.setWindowIcon(QIcon(':/images/windowicon.png'))
